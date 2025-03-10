@@ -1,0 +1,84 @@
+/* Top Search Bar*/
+
+.topNav {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.969); /* Add this line */
+  height: 80px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.topNav input[type="text"] {
+  width: 20%; /* Adjust the width as needed */
+  padding: 10px; /* Add padding for better appearance */
+  border-radius: 1px; /* Add border radius */
+  font: 20px Roboto, sans-serif;
+  position: absolute;
+  left : 50%;
+  transform: translateX(-50%);
+}
+
+.topNav .logo{
+ width: 6%;
+ height: auto;
+ position: absolute;
+  left: 20px;
+}
+
+/* Nav Bar*/
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: sticky;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.969);
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  background-color: rgba(0, 0, 0, 0.969); /* Add this line */
+}
+
+.logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-list li {
+  list-style: none;
+  margin: 0px;
+  padding: 10px 40px;
+  border-radius:0px;
+  background-color: rgba(2, 2, 2, 0.969); /* Add this line */
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #ededed;
+  font: 20px Roboto, sans-serif;
+  font-weight: bold;
+  display: block;
+}
+
+.nav-list li:hover{
+  background-color: rgba(91, 89, 89, 0.983); 
+}
+
+.nav-list li a:hover {
+  color: rgb(247, 247, 247);
+}
+
+
+
+
+
+
