@@ -1,50 +1,70 @@
 /* Top Search Bar*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-.topNav {
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.969); /* Add this line */
-  height: 80px;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  
 }
 
-.topNav input[type="text"] {
-  width: 20%; /* Adjust the width as needed */
-  padding: 10px; /* Add padding for better appearance */
-  border-radius: 1px; /* Add border radius */
-  font: 20px Roboto, sans-serif;
-  position: absolute;
-  left : 50%;
-  transform: translateX(-50%);
+body::-webkit-scrollbar {
+  display: none;  /* Hide scrollbar in Chrome, Safari, and Opera */
 }
 
-.topNav .logo{
- width: 6%;
- height: auto;
- position: absolute;
-  left: 20px;
-}
 
 /* Nav Bar*/
 
-.navbar {
+.outer {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-end;
-  position: sticky;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.969);
+  width: 100%;
+  height: 5rem;
+  background-color: #01010172;
+}
+
+.blocks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  background-color: 5a5959;
+  background-color: #00000000;
+}
+
+.blocks2{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  background-color: 5a5959;
+  background-color: #1a191900;  
+}
+
+.imgContainer{
+  width: 200px;
+  height: 120px;
+  display: flex;
+ 
+}
+
+.bowlLogov2{
+  width: 100%;
+  height: auto;
+  margin: auto;
 }
 
 .nav-list {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  background-color: rgba(0, 0, 0, 0.969); /* Add this line */
+  margin-right: auto;
+  background-color: #1a191900;
+  justify-content: flex-start;
 }
 
 .logo{
@@ -53,30 +73,521 @@
     align-items: center;
 }
 
+
 .nav-list li {
   list-style: none;
-  margin: 0px;
-  padding: 10px 40px;
-  border-radius:0px;
-  background-color: rgba(2, 2, 2, 0.969); /* Add this line */
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-list li a {
   text-decoration: none;
-  color: #ededed;
-  font: 20px Roboto, sans-serif;
-  font-weight: bold;
-  display: block;
+  color: #fff9f9;
+  font: 15px Roboto, sans-serif;
+  white-space: nowrap;
 }
 
 .nav-list li:hover{
-  background-color: rgba(91, 89, 89, 0.983); 
+  /* text-decoration: underline;
+  text-decoration-color: #f7f7f7;
+  text-underline-offset: 7px;  */
+  background-image: linear-gradient(rgba(212, 212, 212, 0), rgb(138, 138, 138));
+  
 }
 
-.nav-list li a:hover {
-  color: rgb(247, 247, 247);
+.search-container{
+  display: flex;
+  align-items: center; /* Vertically center the items */
+  justify-content: flex-end; /* Align the search bar to the right */
+  width: 300px;
+  background-color: #1a191900
 }
 
+#searchIcon {
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+#search {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0);
+  width: 20rem;
+  font-size: 1em;
+  height: 2.8rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid white;
+}
+
+#clear {
+  text-align: right;
+  font-size: 1em;
+  color: rgb(255, 249, 249);
+  position:relative; 
+  margin-left: -1.5rem;
+}
+
+#clear:hover {
+  cursor: pointer;
+}
+
+#cartIcon{
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.dropbtn {
+  background-color: #4caf4f00;
+  color: white;
+  font-size: 1.5em;
+  border: none;
+  cursor: pointer;
+}
+
+.show {display:block;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right:-0.5em;
+  top: 210%;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropbtn:focus .dropbtn:focus{
+
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* 
+.container{
+  position: relative;
+  width: 100%;
+}
+
+.container .ballName {
+  position: absolute;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  left: 52.5rem;
+  top: 11.5rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.container .ballDescription {
+  position: absolute;
+  color: white;
+  font-size: 15px;
+  font-weight: lighter;
+  left: 59rem;
+  top: 16rem;
+  text-align: center;
+}
+
+.container h1{
+  text-align: center;
+  font-size: 30px;
+  color:#ffffff;
+}
+
+.container .banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.container .LearnButton {
+  position: absolute;
+  top: 49%;
+  left: 61%;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  background-color: #ffffff;
+  color: rgb(6, 6, 6);
+  font-size: 16px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font:'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.container .buyButton{
+  position: absolute;
+  top: 49%;
+  left: 70%;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  background-color: #ffffff00;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font:'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.LearnButton:hover{
+  background-color: #f1eeee;
+}
+
+.buyButton:hover{
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+} */
+
+.hero{
+  background-image: url("C:\Users\sohju\Downloads\backgroundt.jpeg");
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hero h1{
+  margin-top: -150px;
+  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  font-weight: 900;
+
+  font-size: 68px;
+  width: 400px;
+  color: #ffff00;
+  text-transform: capitalize;
+}
+
+.hero span{
+  color:#f8f800;
+}
+
+.hero .hero-price{
+  font-family: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  padding: 20px 0px;
+  color: #fff9f9;
+}
+.hero p{
+  font-family: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  width: 400px;
+  padding: 20px 0px;
+  color:#fff9f9
+}
+
+.hero button{
+  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #030303;
+  width: 135px;
+  height: 65px;
+  background-color: #fff;
+  border: none
+}
+
+.hero-img img {
+  width: 700px; 
+  height: auto; 
+  margin-top:  -130px;
+}
+
+.rightSec {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  margin-top:  -150px;
+}
+
+.rightSec img {
+  width: 50px; 
+  height: auto; 
+  max-width: 100%;
+  margin: 5px; 
+}
+
+.hero h2{
+  font-family: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  width: 200px;
+  color:#fff9f9
+}
+
+.aiCore img{
+  height: auto;
+  width: 20%
+}
+
+.ballContainer{
+  background-image: url("C:\Users\sohju\OneDrive\Pictures\Web App Images\bowlingLane.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #02071c;
+  display: flex;
+  padding: 23px;
+  border: 1px solid #6b6868;
+  text-align: center;
+  height: 19.5em;
+}
+
+
+.ball {
+  width: 200px;
+  height: 200px;
+  border-radius: 0%;
+  margin-top: 40px;
+}
+
+.ball {
+  display: block;
+  transition: all 1s;
+}
+
+.ball-holder:hover .ball {
+  transform: translateX(calc(90vw - 80px)) rotate(360deg);
+}
+
+.featuredContainer{
+  background-image: url("C:\Users\sohju\OneDrive\Pictures\Web App Images\backgroundt2.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #02071c;
+  padding: 1px;
+  height: auto;
+}
+
+.featuredHeader {
+  margin-top: 5%;
+  margin-left: 5%;
+  color: rgb(252, 252, 252);
+  justify-content: flex-start;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Fira Sans, sans-serif;
+}
+
+.featuredProducts{
+  position: relative;
+}
+
+.productContainer{
+  display: flex;
+  gap: 30px;
+  margin-left: 63px;
+  margin-right: 63px;
+  margin-bottom: 1%;
+  margin-top: 3%;
+  overflow-x: scroll;
+  height: 370px;
+  flex-wrap: nowrap;
+}
+
+.productContainer::-webkit-scrollbar {
+  display: none;  /* Hide scrollbar in Chrome, Safari, and Opera */
+}
+
+.productName{
+  border-bottom: 1px rgb(255, 255, 255);
+}
+
+.balls{
+  padding: 10px;
+  margin: 10px;
+}
+
+.text{
+  text-align:center;
+  margin-top: 0.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color:white;
+}
+
+.learnMore{
+  display:block;
+  margin: auto;
+  border-radius: 1px;
+  margin-top: 15px;
+  width: 90px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+  border : 1px solid #ffffff;
+}
+
+.learnMore:hover{
+  background-color: #ffffff;
+  color: rgb(6, 6, 6)
+}
+
+.left {
+  position: absolute;
+  left: 3%;
+  top: 30%;
+}
+
+.right {
+  position: absolute;
+  right: 3%;
+  top: 30%;
+}
+
+.scroll-button {
+  background-color: #ffffff00;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.LearnMore:hover {
+  cursor: pointer;
+}
+
+.categoriesContainer{
+  background-image: url("C:\Users\sohju\Downloads\backgroundt2.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #02071c;
+  padding: 1px;
+  height: auto;
+}
+
+.categories {
+  margin-top: 5%;
+  color: rgb(255, 255, 255);
+  margin-left: 5%;
+  
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Fira Sans, sans-serif;
+}
+
+.box{
+  background-color: #1b1918;
+}
+
+.grid-container {
+  display: grid;
+  grid-auto-columns: 200px;
+  grid-auto-rows: 200px;
+  justify-content: center;
+  margin-top: 3%;
+  gap: 1.8em;
+  grid-template-areas:
+  "box-1 box-1 box-1 box-1 box-2 box-2"
+  "box-1 box-1 box-1 box-1 box-2 box-2"
+  "box-4 box-4 box-5  box-5 box-5 box-5"
+  "box-4 box-4  box-5 box-5 box-5 box-5";
+  margin-bottom:10%;
+}
+
+
+.box1{
+  grid-area: box-1;
+  background-image: url('C:\Users\sohju\OneDrive\Pictures\Web App Images\ballcate.png');
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.box1-content{
+  color: white;
+  font-size: 20px;
+  padding-left: 30px;
+  padding-top: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.box1-Shop{
+  padding-top: 12px;
+  font-size: 16px;
+}
+
+.box1-shop:hover{
+  cursor: pointer;
+}
+
+.box2{
+  grid-area: box-2;
+  background-image: url('C:\Users\sohju\OneDrive\Pictures\Web App Images\shoecate.png');
+  background-size: contain;
+  background-position: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.box4{
+  grid-area: box-4;
+  background-image: url('C:\Users\sohju\OneDrive\Pictures\Web App Images\acate.png');
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.box5{
+  grid-area: box-5;
+  background-image: url('C:\Users\sohju\OneDrive\Pictures\Web App Images\belmo.png');
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
 
 
 
