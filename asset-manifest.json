@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/WinterSoju/Bowling-Marketplace-UI.git/static/css/main.e1400f3c.css",
-    "main.js": "/WinterSoju/Bowling-Marketplace-UI.git/static/js/main.c41b9ff0.js",
-    "static/js/453.b9b4a01c.chunk.js": "/WinterSoju/Bowling-Marketplace-UI.git/static/js/453.b9b4a01c.chunk.js",
-    "static/media/ballcate.png": "/WinterSoju/Bowling-Marketplace-UI.git/static/media/ballcate.7e8d9ecbe0a5dc255ab7.png",
-    "static/media/belmo.png": "/WinterSoju/Bowling-Marketplace-UI.git/static/media/belmo.8872a44b1b7700a9764f.png",
-    "static/media/shoecate.png": "/WinterSoju/Bowling-Marketplace-UI.git/static/media/shoecate.d8605db8cf8453d8afed.png",
-    "static/media/acate.png": "/WinterSoju/Bowling-Marketplace-UI.git/static/media/acate.839223f09c38eb1441e4.png",
-    "index.html": "/WinterSoju/Bowling-Marketplace-UI.git/index.html",
-    "main.e1400f3c.css.map": "/WinterSoju/Bowling-Marketplace-UI.git/static/css/main.e1400f3c.css.map",
-    "main.c41b9ff0.js.map": "/WinterSoju/Bowling-Marketplace-UI.git/static/js/main.c41b9ff0.js.map",
-    "453.b9b4a01c.chunk.js.map": "/WinterSoju/Bowling-Marketplace-UI.git/static/js/453.b9b4a01c.chunk.js.map"
+    "main.css": "./static/css/main.1e100a25.css",
+    "main.js": "./static/js/main.1702e910.js",
+    "static/js/453.b9b4a01c.chunk.js": "./static/js/453.b9b4a01c.chunk.js",
+    "static/media/ballcate.png": "./static/media/ballcate.7e8d9ecbe0a5dc255ab7.png",
+    "static/media/belmo.png": "./static/media/belmo.8872a44b1b7700a9764f.png",
+    "static/media/shoecate.png": "./static/media/shoecate.d8605db8cf8453d8afed.png",
+    "static/media/acate.png": "./static/media/acate.839223f09c38eb1441e4.png",
+    "index.html": "./index.html",
+    "main.1e100a25.css.map": "./static/css/main.1e100a25.css.map",
+    "main.1702e910.js.map": "./static/js/main.1702e910.js.map",
+    "453.b9b4a01c.chunk.js.map": "./static/js/453.b9b4a01c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1400f3c.css",
-    "static/js/main.c41b9ff0.js"
+    "static/css/main.1e100a25.css",
+    "static/js/main.1702e910.js"
   ]
 }
